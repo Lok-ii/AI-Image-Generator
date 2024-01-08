@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+.App{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading{
+    font-size: 3rem;
+    color: transparent;
+    background: linear-gradient(90deg, hsla(252, 91%, 55%, 1) 0%, hsla(214, 97%, 55%, 1) 100%);
+    background-clip: text;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem -0.6rem black;
+    background-color: white;
+    padding: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.inputBox{
+    /* background: #f4f4f4; */
+    border: none;
+    font-family: inherit;
+    outline: none;
+    width: 70%;
+    height: 5rem;
+    padding: 2rem;
+    max-height: 8rem;
+    border-radius: 1rem 0 0 1rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit{
+    width: 25%;
+    padding: 0.5rem;
+    border: none;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, hsla(252, 91%, 55%, 1) 0%, hsla(214, 97%, 55%, 1) 100%);
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.submit:focus{
+    transform: scale(0.98);
+}
+
+.imageContainer{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 769px){
+    #root{
+        align-items: flex-start;
+    }
+
+    form{
+        width: 95%;
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .inputBox{
+        height: 3rem;
+        padding: 0.5rem;
+    }
+
+    .submit{
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .imageContainer{
+        width: 90%;
+    }
 }
